@@ -28,4 +28,8 @@ const CanvasLoader = () => {
   );
 };
 
+<<<<<<< HEAD
 export default CanvasLoader;
+=======
+export default CanvasLoader; 
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

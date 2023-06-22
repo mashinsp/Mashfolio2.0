@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
+=======
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
+import React, { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+React.version;
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
+<<<<<<< HEAD
   const computer = useGLTF("./desktop_pc/scene.gltf");
+=======
+  const computer = useGLTF("./desktop_pc/compscene.glb");
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 
   return (
     <mesh>
@@ -22,7 +34,11 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
+<<<<<<< HEAD
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+=======
+        position={isMobile ? [0, -3, -2.2] : [0, -3.6, -1.5]}
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -75,4 +91,8 @@ const ComputersCanvas = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ComputersCanvas;
+=======
+export default ComputersCanvas;
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

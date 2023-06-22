@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build and Deploy a Fantastic 3D Portfolio Website with Three.js and React.js
 ![3D Portfolio](https://i.ibb.co/9ykhLtM/Thumbnail.png)
 
@@ -18,3 +19,10 @@ You'll also learn how to:
 ## Want to land your dream programming job in 3 - 6 months?
 ⭐ JSM Masterclass Experience - https://jsmastery.pro/masterclass
 Become a Software Engineer. Guaranteed.
+=======
+# Mashfolio2.0
+
+## Deployed using vercel
+
+https://mashfolio2-0.vercel.app/
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

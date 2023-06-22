@@ -24,4 +24,8 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

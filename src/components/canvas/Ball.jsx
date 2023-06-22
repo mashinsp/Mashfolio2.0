@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unknown-property */
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -54,4 +60,8 @@ const BallCanvas = ({ icon }) => {
   );
 };
 
+<<<<<<< HEAD
 export default BallCanvas;
+=======
+export default BallCanvas;
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

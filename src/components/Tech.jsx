@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable no-unused-vars */
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import React from "react";
 
 import { BallCanvas } from "./canvas";
@@ -16,4 +20,8 @@ const Tech = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SectionWrapper(Tech, "");
+=======
+export default SectionWrapper(Tech, "");
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

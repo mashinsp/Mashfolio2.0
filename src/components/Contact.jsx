@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable no-unused-vars */
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -37,9 +41,15 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
+<<<<<<< HEAD
           to_name: "JavaScript Mastery",
           from_email: form.email,
           to_email: "sujata@jsmastery.pro",
+=======
+          to_name: "Syed Mashood",
+          from_email: form.email,
+          to_email: "mediafire334@gmail.com",
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -133,4 +143,8 @@ const Contact = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SectionWrapper(Contact, "contact");
+=======
+export default SectionWrapper(Contact, "contact");
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
