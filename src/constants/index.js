@@ -1,7 +1,6 @@
 import {
     mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
@@ -40,20 +39,16 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Software Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Web Developer",
       icon: mobile,
     },
     {
       title: "Backend Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
     },
   ];
   
@@ -131,7 +126,7 @@ import {
       company_name: "Tech for good inc",
       icon: tfglogo,
       iconBg: "#E6DEDD",
-      date: "Jun 2022 - Sep 2022",
+      date: "May 2023 - Aug 2023",
       points: [
         "Collaborated with a team of developers and designers to develop and launch a new software product focused on social impact and sustainability.",
         "Conducted market research and analysis to identify user needs and optimize the software product for success.",
