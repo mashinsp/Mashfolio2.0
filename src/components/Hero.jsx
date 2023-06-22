@@ -16,16 +16,28 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
+<<<<<<< HEAD
+            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            I develop 3D visuals, user <br className='sm:block hidden' />
+            interfaces and web applications
+=======
             Hi, I am <span className='text-[#915EFF]'>Mashood</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I Design, Develop and Mantain <br className='sm:block hidden' />
             Softwares by applying my creative and technical skills
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
           </p>
         </div>
       </div>
 
+<<<<<<< HEAD
+      <ComputersCanvas />
+=======
         <ComputersCanvas />
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
@@ -48,4 +60,8 @@ const Hero = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Hero;
+=======
+export default Hero;
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

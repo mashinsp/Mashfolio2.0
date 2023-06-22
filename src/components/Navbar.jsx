@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
+=======
 React.version
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
+<<<<<<< HEAD
+import { logo, menu, close } from "../assets";
+=======
 import { Mlogo, menu, close } from "../assets";
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -43,10 +50,17 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
+<<<<<<< HEAD
+          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+            Adrian &nbsp;
+            <span className='sm:block hidden'> | JavaScript Mastery</span>
+=======
           <img src={Mlogo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             MashFolio &nbsp;
             <span className='sm:block hidden'></span>
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
           </p>
         </Link>
 
@@ -73,8 +87,14 @@ const Navbar = () => {
           />
 
           <div
+<<<<<<< HEAD
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+=======
             className={`${!toggle ? "hidden" : "flex"} 
             p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -99,4 +119,8 @@ const Navbar = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
