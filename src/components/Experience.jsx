@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import React from "react";
 import {
   VerticalTimeline,
@@ -87,8 +82,4 @@ const Experience = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SectionWrapper(Experience, "work");
-=======
-export default SectionWrapper(Experience, "work");
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import Tilt from "react-tilt";
-=======
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unknown-property */
-import React from "react";
-import {Tilt} from "react-tilt";
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -55,19 +47,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-<<<<<<< HEAD
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
         Three.js. I'm a quick learner and collaborate closely with clients to
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
-=======
-         i am a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. i am a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Lets work together to bring your ideas to life!
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
@@ -79,8 +63,4 @@ const About = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SectionWrapper(About, "about");
-=======
-export default SectionWrapper(About, "about");
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

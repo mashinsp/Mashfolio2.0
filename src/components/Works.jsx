@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import Tilt from "react-tilt";
-=======
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-
-import React from "react";
-import {Tilt} from "react-tilt";
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -106,8 +97,4 @@ const Works = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SectionWrapper(Works, "");
-=======
-export default SectionWrapper(Works, "");
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
