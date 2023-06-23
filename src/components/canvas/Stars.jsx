@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
@@ -43,14 +42,3 @@ const StarsCanvas = () => {
 };
 
 export default StarsCanvas;
-=======
-import React from 'react'
-
-const Stars = () => {
-  return (
-    <div>Stars</div>
-  )
-}
-
-export default Stars
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a

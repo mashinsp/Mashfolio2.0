@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import logo from "./logo.svg";
-=======
-//assets
-import Mlogo from "./Mlogo.png";
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -12,14 +7,6 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-<<<<<<< HEAD
-=======
-//works
-import tfglogo from "./tfglogo.png";
-import upworklogo from "./upworklogo.png";
-
-//techs
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -34,7 +21,6 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-<<<<<<< HEAD
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -46,16 +32,6 @@ import tripguide from "./tripguide.png";
 
 export {
   logo,
-=======
-//proj
-import nftmarketplace from "./nftmarketplace.png";
-import renderer from "./renderer.png"
-import mashupsocial from "./mashupsocial.png";
-
-export {
-  tfglogo,
-  Mlogo,
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
   backend,
   creator,
   mobile,
@@ -76,7 +52,6 @@ export {
   tailwind,
   typescript,
   threejs,
-<<<<<<< HEAD
   meta,
   shopify,
   starbucks,
@@ -84,10 +59,4 @@ export {
   carrent,
   jobit,
   tripguide,
-=======
-  upworklogo,
-  nftmarketplace,
-  mashupsocial,
-  renderer
->>>>>>> 636a77075ddbdf0d236ab4fc94a86c8d9063a83a
 };
