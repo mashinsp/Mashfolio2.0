@@ -1,5 +1,5 @@
 import {
-  aws,
+  backend,
   mobile,
   web,
   javascript,
@@ -43,12 +43,12 @@ const services = [
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Data Analyst",
     icon: mobile,
   },
   {
     title: "Cloud Architect",
-    icon: aws,
+    icon: backend,
   },
 ];
 

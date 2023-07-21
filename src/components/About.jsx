@@ -50,14 +50,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-         i am a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. i am a quick learner and collaborate closely with clients to
+         I am a software developer with experience in TypeScript and
+        C++, and expertise in frameworks like React, Node.js,
+        Three.js and OpenGL. i am a quick learner and collaborate closely with team members to
         create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Lets work together to bring your ideas to life!
+        real-world problems.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap justify-center gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
