@@ -34,8 +34,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        service_j7kyb9z,
-        template_1463f8f,
+        "service_j7kyb9z",
+        "template_1463f8f",
         {
           from_name: form.name,
           to_name: "Syed Mashood",
@@ -43,7 +43,7 @@ const Contact = () => {
           to_email: "mediafire334@gmail.com",
           message: form.message,
         },
-        -XuLe5HrmNeSI8ufd
+        "-XuLe5HrmNeSI8ufd"
       )
       .then(
         () => {
