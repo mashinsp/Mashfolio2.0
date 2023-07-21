@@ -11,6 +11,7 @@ import close from "./close.svg";
 //works
 import tfglogo from "./tfglogo.png";
 import upworklogo from "./upworklogo.png";
+import aws from "./cloud.svg"
 
 //techs
 import css from "./tech/css.png";
@@ -33,6 +34,7 @@ import renderer from "./renderer.png"
 import mashupsocial from "./mashupsocial.png";
 
 export {
+  aws,
   tfglogo,
   Mlogo,
   backend,
