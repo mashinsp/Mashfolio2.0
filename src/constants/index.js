@@ -15,14 +15,12 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  upworklogo,
+  tfglogo,
+  nftmarketplace,
+  mashupsocial,
+  renderer
 } from "../assets";
 
 export const navLinks = [
@@ -117,10 +115,10 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "Upwork",
+    icon: upworklogo,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2022 - April 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -129,42 +127,16 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Engineer",
+    company_name: "Tech for good inc",
+    icon: tfglogo,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Jun 2022 - Sep 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Collaborated with a team of developers and designers to develop and launch a new software product focused on social impact and sustainability.",
+      "Conducted market research and analysis to identify user needs and optimize the software product for success.",
+      "Assisted in the creation of user personas and user stories, ensuring a user-centered approach to software development.",
+      "Participated in agile development practices, including daily stand-up meetings, sprint planning, and retrospectives.",
     ],
   },
 ];
@@ -198,9 +170,30 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "NFT Marketplace",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An NFT marketplace is an online platform that facilitates the buying, selling, and trading of unique digital assets known as non-fungible tokens (NFTs).",
+    tags: [
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Solidity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Piniata(IPFS)",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nftmarketplace,
+    source_code_link: "https://github.com/mashinsp/NFT-Marketplace",
+  },
+  {
+    name: "MashUp Social",
+    description:
+      "MashupSocial is a social networking website that allows users to connect and share content with friends, family, and the wider online community.",
     tags: [
       {
         name: "react",
@@ -211,54 +204,33 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Nodejs",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: mashupsocial,
+    source_code_link: "https://github.com/mashinsp/MashUpSocial",
   },
   {
-    name: "Job IT",
+    name: "Poly Render",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A Poly Render is a software or hardware component that generates images or visual representations from 3D models or other digital data.",
     tags: [
       {
-        name: "react",
+        name: "C++",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "OpenGL",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "CMake",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: renderer,
+    source_code_link: "https://github.com/mashinsp/WorkingwithOpenGl",
   },
 ];
 
