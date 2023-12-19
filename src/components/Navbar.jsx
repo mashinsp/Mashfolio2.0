@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { Mlogo, menu, close } from "../assets";
+import resumeFile from '../assets/SMashoodResume.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -25,6 +26,28 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const downloadResume = () => {
+    fetch(resumeFile)
+      .then((response) => response.blob())
+      .then((blob) => {
+        
+        // Create a link element
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'MashoodResume.pdf'; // Set the desired file name
+
+        // Append the link to the body
+        document.body.appendChild(link);
+
+        // Trigger the click event to start the download
+        link.click();
+
+        // Remove the link from the DOM
+        document.body.removeChild(link);
+      })
+      .catch((error) => console.error('Error downloading resume:', error));
+  }
 
   return (
     <nav
@@ -62,6 +85,9 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li className=" text-secondary hover:text-white text-[18px] font-medium cursor-pointer" onClick={downloadResume}>
+            Download resume
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
