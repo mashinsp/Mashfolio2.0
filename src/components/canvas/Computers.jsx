@@ -27,6 +27,7 @@ const Computers = ({ isMobile }) => {
   scale={isMobile ? 1 : 4}
   position={isMobile ? [-2, -2, 0] : [-2, -2, 0]}
   rotation={[0, Math.PI / 2, 0]}  // Initial rotation to the right
+      >
   </mesh>
   );
 };
