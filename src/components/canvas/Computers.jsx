@@ -11,10 +11,10 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/me.glb");
 
   return (
-<mesh>
-    <hemisphereLight intensity={0.15} groundColor="black" position={[0, 20, 0]} />
+  <mesh>
+    <hemisphereLight intensity={0.8} groundColor="black" position={[0, 10, 0]} />
     <spotLight
-      position={[0, 5, 10]}  // Adjust the position for the spot light
+      position={[0, 10, 10]}  // Adjust the position for the spot light
       angle={0.12}
       penumbra={1}
       intensity={1}
@@ -25,7 +25,7 @@ const Computers = ({ isMobile }) => {
     <primitive
       object={computer.scene}
       scale={isMobile ? 1 : 4}
-      position={isMobile ? [0, -2, -1] : [0, -2, -1]}
+      position={isMobile ? [0, -2, 0] : [-2, -2, 0]}
       rotation={[0, Math.PI / 2, 0]}  // Rotate 90 degrees to the right
     />
   </mesh>
