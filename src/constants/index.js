@@ -39,10 +39,6 @@ const services = [
     icon: web,
   },
   {
-    title: "Data Analyst",
-    icon: mobile,
-  },
-  {
     title: "Cloud Architect",
     icon: backend,
   },
