@@ -23,11 +23,14 @@ const Computers = ({ isMobile }) => {
     />
     <pointLight intensity={1} position={[0, 0, 0]} />
     <primitive
-      object={computer.scene}
-      scale={isMobile ? 1 : 4}
-      position={isMobile ? [0, -2, 0] : [-2, -2, 0]}
-      rotation={[0, Math.PI / 2, 0]}  // Rotate 90 degrees to the right
-    />
+  object={computer.scene}
+  scale={isMobile ? 1 : 4}
+  position={isMobile ? [-2, -2, 0] : [-2, -2, 0]}
+  rotation={[0, Math.PI / 2, 0]}  // Initial rotation to the right
+  onUpdate={(self) => {
+    // Rotate around the model's own y-axis
+    self.rotation.y += 0.005; // You can adjust the rotation speed as needed
+  }}
   </mesh>
   );
 };
