@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unknown-property */
-
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -9,11 +6,15 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile, rotationSpeed }) => {
   const computer = useGLTF("./desktop_pc/me.glb");
 
+  // Adjust scale based on device type
+  const scale = isMobile ? 2 : 4;
+  const position = isMobile ? [-2, -2, 0] : [-2, -2, 0];
+
   return (
     <mesh>
       <hemisphereLight intensity={0.8} groundColor="black" position={[0, 10, 0]} />
       <spotLight
-        position={[0, 10, 10]}  // Adjust the position for the spot light
+        position={[0, 10, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1}
@@ -23,12 +24,14 @@ const Computers = ({ isMobile, rotationSpeed }) => {
       <pointLight intensity={1} position={[0, 0, 0]} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1 : 4}
-        position={isMobile ? [-2, -2, 0] : [-2, -2, 0]}
+        scale={scale}
+        position={position}
         rotation={[0, Math.PI / 2, 0]}
         onUpdate={(self) => {
-          // Rotate around the model's own y-axis
-          self.rotation.y += rotationSpeed;
+          // Rotate around the model's own y-axis only if it's not a mobile device
+          if (!isMobile) {
+            self.rotation.y += rotationSpeed;
+          }
         }}
       />
     </mesh>
@@ -41,28 +44,22 @@ const ComputersCanvas = () => {
   const [rotationDirection, setRotationDirection] = useState(1);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
     mediaQuery.addListener(handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeListener(handleMediaQueryChange);
     };
   }, []);
 
   useEffect(() => {
-    // Start the rotation animation
     const intervalId = setInterval(() => {
       setRotationSpeed(rotationDirection * 0.005);
       setRotationDirection((prevDirection) => -prevDirection);
@@ -85,6 +82,7 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableRotate={!isMobile} // Enable rotation only if it's not a mobile device
         />
         <Computers isMobile={isMobile} rotationSpeed={rotationSpeed} />
       </Suspense>
