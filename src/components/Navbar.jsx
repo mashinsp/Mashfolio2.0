@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { Mlogo, menu, close } from "../assets";
-import resumeFile from '../assets/SMashoodResume.pdf';
+import resumeFile from '../assets/MashResume.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -117,6 +117,15 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li
+                className="font-poppins font-medium cursor-pointer text-[16px] text-secondary"
+                onClick={() => {
+                  setToggle(!toggle);
+                  downloadResume();
+                }}
+              >
+                Download resume
+              </li>
             </ul>
           </div>
         </div>
