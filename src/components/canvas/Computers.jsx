@@ -59,23 +59,26 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop={isMobile ? "demand" : "always"}
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          enableRotate={!isMobile} // Disable rotation controls on mobile
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-    </Canvas>
+    <div style={{ height: '100vh', overflow: 'auto', touchAction: 'auto' }}>
+      <Canvas
+        frameloop={isMobile ? "demand" : "always"}
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+        style={{ position: 'sticky', top: 0 , pointerEvents: 'none'}}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            enableRotate={!isMobile}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 };
 
