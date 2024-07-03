@@ -1,38 +1,37 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile, rotationSpeed }) => {
+const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/me.glb");
+  const meshRef = useRef();
+  const scale = isMobile ? 0.7 : 2.5; // Increased scale for web version
+  const position = isMobile ? [0, -2, 0] : [0, -2, 0];
 
-  // Adjust scale based on device type
-  const scale = isMobile ? 2 : 4;
-  const position = isMobile ? [-2, -2, 0] : [-2, -2, 0];
+  useFrame((state, delta) => {
+    if (meshRef.current && !isMobile) {
+      meshRef.current.rotation.y += delta * 0.5; // Adjust rotation speed here
+    }
+  });
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.8} groundColor="black" position={[0, 10, 0]} />
+    <mesh ref={meshRef}>
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
-        position={[0, 10, 10]}
+        position={[-20, 10, 30]}
         angle={0.12}
         penumbra={1}
         intensity={1}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} position={[0, 0, 0]} />
+      <pointLight intensity={1} />
       <primitive
         object={computer.scene}
         scale={scale}
         position={position}
-        rotation={[0, Math.PI / 2, 0]}
-        onUpdate={(self) => {
-          // Rotate around the model's own y-axis only if it's not a mobile device
-          if (!isMobile) {
-            self.rotation.y += rotationSpeed;
-          }
-        }}
+        rotation={[0, 0, 0]}
       />
     </mesh>
   );
@@ -40,38 +39,25 @@ const Computers = ({ isMobile, rotationSpeed }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [rotationSpeed, setRotationSpeed] = useState(0.005);
-  const [rotationDirection, setRotationDirection] = useState(1);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
     setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    mediaQuery.addListener(handleMediaQueryChange);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRotationSpeed(rotationDirection * 0.005);
-      setRotationDirection((prevDirection) => -prevDirection);
-    }, 3000); // Change rotation direction every 3 seconds
-
-    // Clear the interval when the component is unmounted
-    return () => clearInterval(intervalId);
-  }, [rotationDirection]);
-
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
@@ -82,12 +68,9 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enableRotate={!isMobile} // Enable rotation only if it's not a mobile device
         />
-        <Computers isMobile={isMobile} rotationSpeed={rotationSpeed} />
+        <Computers isMobile={isMobile} />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 };
