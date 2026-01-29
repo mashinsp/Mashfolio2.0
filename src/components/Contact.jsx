@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -17,6 +17,12 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ type: "", text: "" });
+
+  const showMessage = (type, text) => {
+    setMessage({ type, text });
+    setTimeout(() => setMessage({ type: "", text: "" }), 5000);
+  };
 
   const handleChange = (e) => {
     const { target } = e;
@@ -65,6 +71,39 @@ const Contact = () => {
       );
   };
 
+  useEffect(() => {
+    // Initialize EmailJS with public key (also acceptable to set via env)
+    try {
+      emailjs.init("-XuLe5HrmNeSI8ufd");
+    } catch (err) {
+      // ignore if already initialized
+    }
+  }, []);
+
+  const handleSubmitAsync = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const templateParams = {
+      from_name: form.name,
+      to_name: "Syed Mashood",
+      from_email: form.email,
+      to_email: "mediafire334@gmail.com",
+      message: form.message,
+    };
+
+    try {
+      await emailjs.send("service_j7kyb9z", "template_1463f8f", templateParams);
+      setLoading(false);
+      showMessage("success", "Thank you! I'll get back to you as soon as possible.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      setLoading(false);
+      console.error("EmailJS send error:", error);
+      showMessage("error", "Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
@@ -76,9 +115,21 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
+        {message.text && (
+          <div
+            className={`mb-4 p-4 rounded-lg font-medium transition-opacity duration-300 ${
+              message.type === "success"
+                ? "bg-green-900 text-green-100"
+                : "bg-red-900 text-red-100"
+            }`}
+          >
+            {message.text}
+          </div>
+        )}
+
         <form
           ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmitAsync}
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
