@@ -18,6 +18,7 @@ import {
   companylogo,
   tfglogo,
   aiarch,
+  nftmarketplace,
   mashupsocial,
   renderer
 } from "../assets";
