@@ -46,32 +46,16 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Node JS",
@@ -82,48 +66,64 @@ const technologies = [
     icon: mongodb,
   },
   {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Docker",
+    icon: docker,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Figma",
+    icon: figma,
   },
 ];
 
 const experiences = [
   {
-    title: "Developer",
-    company_name: "Upwork",
+    title: "FullStack Developer",
+    company_name: "SuperTech",
     icon: upworklogo,
     iconBg: "#383E56",
-    date: "March 2022 - Present",
+    date: "Nov 2024 - Aug 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed Shopify-integrated chatbot using Remix Framework, serving 80+ merchants and increasing user engagement by 45% through personalized recommendations.",
+      "Integrated 15+ Shopify APIs processing 5,000+ daily requests with excellent uptime and improving merchant productivity.",
+      "Solved critical problems in a thoughtful and effective manner to ensure platform reliability and performance.",
+      "Collaborated with cross-functional teams to deliver scalable solutions meeting merchant needs.",
     ],
   },
   {
-    title: "Software Engineer",
-    company_name: "Tech for good inc",
+    title: "Software Engineer Intern",
+    company_name: "Tech for Good",
     icon: tfglogo,
     iconBg: "#E6DEDD",
-    date: "May 2023 - Aug 2023",
+    date: "Jun 2023 - Aug 2023",
     points: [
-      "Collaborated with a team of developers and designers to develop and launch a new software product focused on social impact and sustainability.",
-      "Conducted market research and analysis to identify user needs and optimize the software product for success.",
-      "Assisted in the creation of user personas and user stories, ensuring a user-centered approach to software development.",
-      "Participated in agile development practices, including daily stand-up meetings, sprint planning, and retrospectives.",
+      "Developed healthcare portal using React and Node.js, serving 1,200+ users and reducing appointment booking time by 60%.",
+      "Implemented agile methodologies across 6-member team, increasing sprint velocity and team productivity.",
+      "Optimized database queries and API endpoints, improving load times and system performance.",
+      "Participated in code reviews and contributed to high-quality product development.",
     ],
   },
 ];
@@ -157,12 +157,54 @@ const testimonials = [
 
 const projects = [
   {
+    name: "AI-ARCH: Intelligent Architecture Generator",
+    description:
+      "AI-powered platform using HouseGAN to generate house floor plans from user-defined room connections. Features interactive Canvas-based interface with drag-and-drop functionality and real-time visualization for 10+ room types.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TensorFlow",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nftmarketplace,
+    source_code_link: "https://github.com/mashinsp/AI-ARCH",
+  },
+  {
+    name: "Discord Clone",
+    description:
+      "Full-stack real-time messaging platform with voice channels, file sharing, and server management. Implemented WebSocket architecture for instant messaging, live user status, and real-time notifications.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Socket.io",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Prisma",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: mashupsocial,
+    source_code_link: "https://github.com/mashinsp/Discord-Clone",
+  },
+  {
     name: "NFT Marketplace",
     description:
       "An NFT marketplace is an online platform that facilitates the buying, selling, and trading of unique digital assets known as non-fungible tokens (NFTs).",
     tags: [
       {
-        name: "Typescript",
+        name: "TypeScript",
         color: "blue-text-gradient",
       },
       {
@@ -170,54 +212,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Piniata(IPFS)",
+        name: "Pinata(IPFS)",
         color: "pink-text-gradient",
       },
     ],
     image: nftmarketplace,
     source_code_link: "https://github.com/mashinsp/NFT-Marketplace",
-  },
-  {
-    name: "MashUp Social",
-    description:
-      "MashupSocial is a social networking website that allows users to connect and share content with friends, family, and the wider online community.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Nodejs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: mashupsocial,
-    source_code_link: "https://github.com/mashinsp/MashUpSocial",
-  },
-  {
-    name: "Poly Render",
-    description:
-      "A Poly Render is a software or hardware component that generates images or visual representations from 3D models or other digital data.",
-    tags: [
-      {
-        name: "C++",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "OpenGL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "CMake",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: renderer,
-    source_code_link: "https://github.com/mashinsp/WorkingwithOpenGl",
   },
 ];
 
