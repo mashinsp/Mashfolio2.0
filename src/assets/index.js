@@ -32,7 +32,7 @@ import threejs from "./tech/threejs.svg";
 import nftmarketplace from "./nftmarketplace.png";
 import renderer from "./renderer.png"
 import mashupsocial from "./mashupsocial.png";
-import aiarch from "./aiarch.png"
+import aiarch from "./aiarch.jpg";
 
 export {
   aws,
