@@ -10,7 +10,7 @@ import close from "./close.svg";
 
 //works
 import tfglogo from "./tfglogo.png";
-import upworklogo from "./upworklogo.png";
+import companylogo from "./companylogo.png";
 import aws from "./cloud.svg"
 
 //techs

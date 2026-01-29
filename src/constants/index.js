@@ -15,7 +15,7 @@ import {
   figma,
   docker,
   threejs,
-  upworklogo,
+  companylogo,
   tfglogo,
   nftmarketplace,
   mashupsocial,
@@ -103,7 +103,7 @@ const experiences = [
   {
     title: "FullStack Developer",
     company_name: "SuperTech",
-    icon: upworklogo,
+    icon: companylogo,
     iconBg: "#383E56",
     date: "Nov 2024 - Aug 2025",
     points: [
