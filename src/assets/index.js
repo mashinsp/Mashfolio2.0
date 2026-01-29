@@ -57,7 +57,7 @@ export {
   tailwind,
   typescript,
   threejs,
-  upworklogo,
+  companylogo,
   nftmarketplace,
   mashupsocial,
   renderer
