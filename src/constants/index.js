@@ -17,7 +17,7 @@ import {
   threejs,
   companylogo,
   tfglogo,
-  nftmarketplace,
+  aiarch,
   mashupsocial,
   renderer
 } from "../assets";
@@ -174,7 +174,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: nftmarketplace,
+    image: aiarch,
     source_code_link: "https://github.com/mashinsp/AI-ARCH",
   },
   {
